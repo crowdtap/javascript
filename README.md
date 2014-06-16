@@ -835,7 +835,7 @@ Based on the JS styleguide by [Airbnb](https://github.com/airbnb/javascript)
           title: 'Hello world'
         }
       ]
-    }
+    };
     ```
 
 **[⬆ back to top](#table-of-contents)**
