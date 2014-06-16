@@ -820,7 +820,7 @@ Based on the JS styleguide by [Airbnb](https://github.com/airbnb/javascript)
         .call(tron.led);
     ```
 
-  - Use indentation for deeply nested objects, aligning on colons (`:`).
+  - Use indentation for deeply nested objects.
 
     ```javascript
     // bad
@@ -1048,16 +1048,17 @@ Based on the JS styleguide by [Airbnb](https://github.com/airbnb/javascript)
     });
     ```
 
-  - Use snake\_case strictly when dealing with variables related to data returned
-  from an API
+  - Using snake\_case is only acceptable for attributes returned from an API
 
     ```javascript
     // bad
-    var default_user_color = 'red';
+    Users.get().then(function(data) {
+      $scope.user_name = data.user_name;
+    });
 
     // good
     Users.get().then(function(data) {
-      $scope.user_color = data.user_color;
+      $scope.userName = data.user_name;
     });
     ```
 
@@ -1344,8 +1345,7 @@ Based on the JS styleguide by [Airbnb](https://github.com/airbnb/javascript)
 
 ## jQuery
 
-  - Prefix jQuery object variables with a `$`, unless within an Angular app (in
-  which case, you probably shouldn't be using jQuery directly anyway).
+  - Prefix jQuery object variables with a `$`.
 
     ```javascript
     // bad
